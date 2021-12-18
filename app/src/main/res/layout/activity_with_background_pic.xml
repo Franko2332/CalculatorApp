@@ -5,6 +5,11 @@
     android:background="#000000"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/black_texture"
+        />
     <EditText
         android:layout_marginTop="30dp"
         android:textSize="70sp"
@@ -25,6 +30,7 @@
         android:paddingRight="13dp"
         android:paddingBottom="15dp"
         >
+
         <Button
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
@@ -255,6 +261,5 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/comma" />
-
     </GridLayout>
 </FrameLayout>
