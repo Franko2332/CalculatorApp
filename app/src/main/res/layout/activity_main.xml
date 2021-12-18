@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
@@ -40,6 +39,7 @@
 <!--            android:inputType="number"-->
 <!--            android:textSize="30sp" />-->
         <Button
+            android:id="@+id/MC"
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -50,6 +50,7 @@
             android:text="@string/MC" />
 
         <Button
+            android:id="@+id/M_PLUS"
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -60,6 +61,7 @@
             android:text="@string/M_PLUS" />
 
         <Button
+            android:id="@+id/M_MINUS"
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -70,6 +72,7 @@
             android:text="@string/M_MINUS" />
 
         <Button
+            android:id="@+id/MR"
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
