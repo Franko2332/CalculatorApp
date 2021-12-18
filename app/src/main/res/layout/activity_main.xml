@@ -5,26 +5,40 @@
     android:background="#000000"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <EditText
-        android:layout_marginTop="30dp"
-        android:textSize="70sp"
-        android:layout_marginRight="13dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:autofillHints=""
-        android:inputType="number" />
+
+
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="550dp"
         android:layout_gravity="bottom"
         android:columnCount="4"
-        android:rowCount="6"
-        android:paddingLeft="5dp"
-        android:paddingRight="13dp"
+        android:rowCount="8"
+        android:paddingStart="5dp"
+        android:paddingEnd="13dp"
         android:paddingBottom="15dp"
         >
+        <EditText
+            android:id="@+id/calcEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="right"
+            android:text="@string/zero"
+            android:inputType="number"
+            android:textSize="50sp"
+            android:background="@android:color/transparent"/>
+<!--        <TextView-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_columnSpan="4"-->
+<!--            android:layout_gravity="fill_horizontal"-->
+<!--            android:gravity="right"-->
+<!--            android:autofillHints=""-->
+<!--            android:inputType="number"-->
+<!--            android:textSize="30sp" />-->
         <Button
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
@@ -66,6 +80,7 @@
             android:text="@string/MR" />
 
         <Button
+            android:id="@+id/clear"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -76,6 +91,7 @@
             android:text="@string/C" />
 
         <Button
+            android:id="@+id/DIVISION"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -86,6 +102,7 @@
             android:text="@string/division" />
 
         <Button
+            android:id="@+id/MULTIPLE"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -96,6 +113,7 @@
             android:text="@string/multiple" />
 
         <Button
+            android:id="@+id/delete_digit"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -106,6 +124,7 @@
             android:text="@string/delete" />
 
         <Button
+            android:id="@+id/seven"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -116,6 +135,7 @@
             android:text="@string/seven" />
 
         <Button
+            android:id="@+id/eight"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -126,6 +146,7 @@
             android:text="@string/eight" />
 
         <Button
+            android:id="@+id/nine"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -136,6 +157,7 @@
             android:text="@string/nine" />
 
         <Button
+            android:id="@+id/MINUS"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -146,6 +168,7 @@
             android:text="@string/minus" />
 
         <Button
+            android:id="@+id/four"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -156,6 +179,7 @@
             android:text="@string/four" />
 
         <Button
+            android:id="@+id/five"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -166,6 +190,7 @@
             android:text="@string/five" />
 
         <Button
+            android:id="@+id/six"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -176,6 +201,7 @@
             android:text="@string/six" />
 
         <Button
+            android:id="@+id/PLUS"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -187,6 +213,7 @@
 
         <Button
             style="@style/NumbersStyle"
+            android:id="@+id/one"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -196,6 +223,7 @@
             android:text="@string/one" />
 
         <Button
+            android:id="@+id/two"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -206,6 +234,7 @@
             android:text="@string/two" />
 
         <Button
+            android:id="@+id/three"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -216,6 +245,7 @@
             android:text="@string/three" />
 
         <Button
+            android:id="@+id/EQUALS"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -227,6 +257,7 @@
             android:text="@string/equals" />
 
         <Button
+            android:id="@+id/PERCENT"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -237,6 +268,7 @@
             android:text="@string/percent" />
 
         <Button
+            android:id="@+id/zero"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -247,6 +279,7 @@
             android:text="@string/zero" />
 
         <Button
+            android:id="@+id/COMMA"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
