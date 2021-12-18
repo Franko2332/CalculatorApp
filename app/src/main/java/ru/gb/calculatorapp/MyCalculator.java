@@ -1,24 +1,47 @@
 package ru.gb.calculatorapp;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.text.Editable;
 import android.util.Log;
 import android.widget.EditText;
 
-public class MyCalculator {
+public class MyCalculator implements Parcelable {
 
     private EditText editText;
-    private boolean operandMode;
-    private String operand;
-    private String approvedOperand;
-    private float number1;
-    private float number2;
+    private static boolean operandMode;
+    private static String operand;
+    private static String approvedOperand;
+    private static float number1;
+    private static float number2;
+    private static String strForRestore;
 
-
-    public MyCalculator(EditText editText) {
+    public MyCalculator(EditText editText)  {
         this.editText = editText;
         operandMode = false;
     }
 
+
+    protected MyCalculator(Parcel in) {
+        operandMode = in.readByte() != 0;
+        operand = in.readString();
+        approvedOperand = in.readString();
+        number1 = in.readFloat();
+        number2 = in.readFloat();
+        strForRestore = in.readString();
+    }
+
+    public static final Creator<MyCalculator> CREATOR = new Creator<MyCalculator>() {
+        @Override
+        public MyCalculator createFromParcel(Parcel in) {
+            return new MyCalculator(in);
+        }
+
+        @Override
+        public MyCalculator[] newArray(int size) {
+            return new MyCalculator[size];
+        }
+    };
 
     public void plus() {
         resulting();
@@ -91,6 +114,7 @@ public class MyCalculator {
         editText.setText("0");
         number1 = 0;
         number2 = 0;
+        strForRestore="0";
     }
 
 
@@ -117,6 +141,7 @@ public class MyCalculator {
             str.clear();
         }
         str.append(ch);
+        strForRestore = str.toString();
     }
 
     private void uncheckOperandMode() {
@@ -158,5 +183,32 @@ public class MyCalculator {
             approvedOperand = null;
         }
 
+    }
+
+    public String getStrForRestore() {
+        return strForRestore;
+    }
+
+    public float getNumber1() {
+        return number1;
+    }
+
+    public float getNumber2() {
+        return number2;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeByte((byte) (operandMode ? 1 : 0));
+        parcel.writeString(operand);
+        parcel.writeString(approvedOperand);
+        parcel.writeFloat(number1);
+        parcel.writeFloat(number2);
+        parcel.writeString(strForRestore);
     }
 }

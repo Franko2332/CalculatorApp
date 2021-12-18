@@ -1,9 +1,12 @@
 package ru.gb.calculatorapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -17,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText editText;
     private MyCalculator myCalculator;
+    private final String KEY_CALCULATOR = "MY_CALCULATOR";
 
 
     @Override
@@ -24,6 +28,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable(KEY_CALCULATOR, myCalculator);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        myCalculator = savedInstanceState.getParcelable(KEY_CALCULATOR);
+        editText.setText(String.valueOf(myCalculator.getStrForRestore()));
     }
 
     @SuppressLint("SetTextI18n")
