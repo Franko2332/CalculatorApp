@@ -9,35 +9,53 @@
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="320dp"
         android:layout_gravity="bottom"
-        android:columnCount="4"
+        android:columnCount="6"
         android:rowCount="8"
-        android:paddingStart="5dp"
+        android:paddingStart="3dp"
         android:paddingEnd="13dp"
-        android:paddingBottom="15dp"
+        android:paddingBottom="5dp"
         >
         <EditText
             android:id="@+id/calcEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_columnSpan="4"
+            android:layout_columnSpan="6"
             android:layout_gravity="fill_horizontal"
             android:gravity="right"
             android:text="@string/zero"
             android:inputType="number"
-            android:textSize="50sp"
+            android:textSize="40sp"
             android:background="@android:color/transparent"/>
-<!--        <TextView-->
-<!--            android:layout_marginBottom="10dp"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_columnSpan="4"-->
-<!--            android:layout_gravity="fill_horizontal"-->
-<!--            android:gravity="right"-->
-<!--            android:autofillHints=""-->
-<!--            android:inputType="number"-->
-<!--            android:textSize="30sp" />-->
+        <!--        <TextView-->
+        <!--            android:layout_marginBottom="10dp"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_columnSpan="4"-->
+        <!--            android:layout_gravity="fill_horizontal"-->
+        <!--            android:gravity="right"-->
+        <!--            android:autofillHints=""-->
+        <!--            android:inputType="number"-->
+        <!--            android:textSize="30sp" />-->
+        <Button
+            style="@style/OtherButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/x_squared" />
+        <Button
+            style="@style/OtherButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/x_cube" />
         <Button
             android:id="@+id/MC"
             style="@style/OtherButtonStyle"
@@ -48,6 +66,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/MC" />
+
 
         <Button
             android:id="@+id/M_PLUS"
@@ -81,7 +100,24 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/MR" />
-
+        <Button
+            style="@style/OtherButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="x!" />
+        <Button
+            style="@style/OtherButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/root" />
         <Button
             android:id="@+id/clear"
             style="@style/OperationButtonsStyle"
@@ -125,7 +161,24 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/delete" />
-
+        <Button
+            style="@style/OtherButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/exhibitor" />
+        <Button
+            style="@style/OtherButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/ln" />
         <Button
             android:id="@+id/seven"
             style="@style/NumbersStyle"
@@ -169,7 +222,24 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/minus" />
-
+        <Button
+            style="@style/OtherButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/sin" />
+        <Button
+            style="@style/OtherButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/cos" />
         <Button
             android:id="@+id/four"
             style="@style/NumbersStyle"
@@ -213,7 +283,24 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/plus" />
-
+        <Button
+            style="@style/OtherButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/tan" />
+        <Button
+            style="@style/OtherButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/rad" />
         <Button
             style="@style/NumbersStyle"
             android:id="@+id/one"
@@ -258,7 +345,24 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/equals" />
-
+        <Button
+            style="@style/OtherButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/_1_x" />
+        <Button
+            style="@style/OtherButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/cot" />
         <Button
             android:id="@+id/PERCENT"
             style="@style/NumbersStyle"
