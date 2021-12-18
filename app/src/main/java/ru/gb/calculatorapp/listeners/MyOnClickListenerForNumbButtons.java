@@ -19,13 +19,7 @@ public class MyOnClickListenerForNumbButtons implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        Editable str = editText.getText();
         Button btn = (Button) view;
-        if ("0".equals(str.toString())) {
-            str.clear();
-            str.append(btn.getText());
-        } else {
-            str.append(btn.getText());
-        }
+        myCalculator.setDigitToEditText(btn.getText());
     }
 }
