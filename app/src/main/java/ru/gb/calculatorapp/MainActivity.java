@@ -28,19 +28,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+        //Log.e("Oncreate.strForRestore", myCalculator.getStrForRestore());
+        Log.e("Oncreate.number1", String.valueOf(myCalculator.getNumber1()));
+        Log.e("Oncreate.number2", String.valueOf(myCalculator.getNumber2()));
     }
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putParcelable(KEY_CALCULATOR, myCalculator);
+        Log.e("Activity.strForRestore", myCalculator.getStrForRestore());
+        Log.e("Activity.number1", String.valueOf(myCalculator.getNumber1()));
+        Log.e("Activity.number2", String.valueOf(myCalculator.getNumber2()));
     }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         myCalculator = savedInstanceState.getParcelable(KEY_CALCULATOR);
-        editText.setText(String.valueOf(myCalculator.getStrForRestore()));
+        editText.setText(myCalculator.getStrForRestore());
     }
 
     @SuppressLint("SetTextI18n")

@@ -7,7 +7,7 @@ import ru.gb.calculatorapp.MyCalculator;
 import ru.gb.calculatorapp.Operations;
 
 public class MyOnclickListenerForOperandButtons implements View.OnClickListener {
-    private MyCalculator myCalculator;
+    private final MyCalculator myCalculator;
     private final String PACKAGE = "ru.gb.calculatorapp:id/";
 
     public MyOnclickListenerForOperandButtons(MyCalculator myCalculator) {

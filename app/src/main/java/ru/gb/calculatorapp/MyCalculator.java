@@ -1,5 +1,6 @@
 package ru.gb.calculatorapp;
 
+import android.annotation.SuppressLint;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.Editable;
@@ -7,8 +8,8 @@ import android.util.Log;
 import android.widget.EditText;
 
 public class MyCalculator implements Parcelable {
-
     private EditText editText;
+
     private static boolean operandMode;
     private static String operand;
     private static String approvedOperand;
@@ -16,11 +17,10 @@ public class MyCalculator implements Parcelable {
     private static float number2;
     private static String strForRestore;
 
-    public MyCalculator(EditText editText)  {
+    public MyCalculator(EditText editText) {
         this.editText = editText;
         operandMode = false;
     }
-
 
     protected MyCalculator(Parcel in) {
         operandMode = in.readByte() != 0;
@@ -30,18 +30,6 @@ public class MyCalculator implements Parcelable {
         number2 = in.readFloat();
         strForRestore = in.readString();
     }
-
-    public static final Creator<MyCalculator> CREATOR = new Creator<MyCalculator>() {
-        @Override
-        public MyCalculator createFromParcel(Parcel in) {
-            return new MyCalculator(in);
-        }
-
-        @Override
-        public MyCalculator[] newArray(int size) {
-            return new MyCalculator[size];
-        }
-    };
 
     public void plus() {
         resulting();
@@ -71,15 +59,14 @@ public class MyCalculator implements Parcelable {
         operand = "/";
     }
 
+    @SuppressLint("SetTextI18n")
     public void percent() {
         resulting();
         float fl = Float.parseFloat(editText.getText().toString());
         fl = fl / 100;
         if (fl % 1 == 0) {
             editText.setText(Integer.toString((int) fl));
-        } else {
-            editText.setText(Float.toString(fl));
-        }
+        } else editText.setText(Float.toString(fl));
     }
 
     public void equals() {
@@ -99,22 +86,31 @@ public class MyCalculator implements Parcelable {
     }
 
     public void comma() {
+        Log.e("before.strForRestore", strForRestore);
+        Log.e("before.number1", String.valueOf(number1));
+        Log.e("before.number2", String.valueOf(number2));
         Editable editable = editText.getText();
         if (isOperationInputMode()) {
-            setNumber1(Float.parseFloat(editable.toString()));
-            editable.clear();
             uncheckOperandMode();
+            editable.clear();
             editable.append("0.");
+            approvedOperand = operand;
+            strForRestore = editable.toString();
         } else if (!editable.toString().contains(".")) {
             editable.append(".");
         }
+        Log.e("after.strForRestore", strForRestore);
+        Log.e("after.number1", String.valueOf(number1));
+        Log.e("after.number2", String.valueOf(number2));
+        Log.e("after.operand", operand);
+        Log.e("after.approved_operand", String.valueOf(approvedOperand!=null));
     }
 
     public void clear() {
         editText.setText("0");
         number1 = 0;
         number2 = 0;
-        strForRestore="0";
+        strForRestore = "0";
     }
 
 
@@ -128,12 +124,13 @@ public class MyCalculator implements Parcelable {
                         editText.getText().toString(), 0, editText.getText().toString().length() - 1);
             }
         }
+        strForRestore = editText.getText().toString();
     }
 
     public void setDigitToEditText(CharSequence ch) {
         Editable str = editText.getText();
         if (operandMode) {
-            approvedOperand = new String(operand);
+            approvedOperand = operand;
             str.clear();
             uncheckOperandMode();
         }
@@ -142,6 +139,9 @@ public class MyCalculator implements Parcelable {
         }
         str.append(ch);
         strForRestore = str.toString();
+        Log.e("strForRestore", strForRestore);
+        Log.e("number1", String.valueOf(number1));
+        Log.e("number2", String.valueOf(number2));
     }
 
     private void uncheckOperandMode() {
@@ -158,20 +158,26 @@ public class MyCalculator implements Parcelable {
     }
 
     private void setNumber1(float number1) {
-        this.number1 = number1;
+        MyCalculator.number1 = number1;
     }
 
     private void resulting() {
+        Log.e("resulting_don't_if", "from resulting");
         if (approvedOperand != null) {
-            Log.e("resulting", "from resulting");
-            if (approvedOperand.equals("+")) {
-                number2 = number1 + Float.parseFloat(editText.getText().toString());
-            } else if (approvedOperand.equals("-")) {
-                number2 = number1 - Float.parseFloat(editText.getText().toString());
-            } else if (approvedOperand.equals("*")) {
-                number2 = number1 * Float.parseFloat(editText.getText().toString());
-            } else if (approvedOperand.equals("/")) {
-                number2 = number1 / Float.parseFloat(editText.getText().toString());
+            Log.e("resulting", "from resulting editText = "+editText.getText().toString());
+            switch (approvedOperand) {
+                case "+":
+                    number2 = number1 + Float.parseFloat(editText.getText().toString());
+                    break;
+                case "-":
+                    number2 = number1 - Float.parseFloat(editText.getText().toString());
+                    break;
+                case "*":
+                    number2 = number1 * Float.parseFloat(editText.getText().toString());
+                    break;
+                case "/":
+                    number2 = number1 / Float.parseFloat(editText.getText().toString());
+                    break;
             }
             editText.getText().clear();
             if (number2 % 1 == 0) {
@@ -182,11 +188,11 @@ public class MyCalculator implements Parcelable {
             number1 = number2;
             approvedOperand = null;
         }
-
     }
 
     public String getStrForRestore() {
-        return strForRestore;
+        if (strForRestore!=null) {return strForRestore;
+    } else return "0";
     }
 
     public float getNumber1() {
@@ -211,4 +217,16 @@ public class MyCalculator implements Parcelable {
         parcel.writeFloat(number2);
         parcel.writeString(strForRestore);
     }
+
+    public static final Creator<MyCalculator> CREATOR = new Creator<MyCalculator>() {
+        @Override
+        public MyCalculator createFromParcel(Parcel in) {
+            return new MyCalculator(in);
+        }
+
+        @Override
+        public MyCalculator[] newArray(int size) {
+            return new MyCalculator[size];
+        }
+    };
 }
