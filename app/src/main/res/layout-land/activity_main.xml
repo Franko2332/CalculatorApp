@@ -38,7 +38,7 @@
         <!--            android:autofillHints=""-->
         <!--            android:inputType="number"-->
         <!--            android:textSize="30sp" />-->
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -47,7 +47,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/x_squared" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -56,7 +56,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/x_cube" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/MC"
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
@@ -68,7 +68,7 @@
             android:text="@string/MC" />
 
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/M_PLUS"
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
@@ -79,7 +79,7 @@
             android:gravity="center"
             android:text="@string/M_PLUS" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/M_MINUS"
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
@@ -90,7 +90,7 @@
             android:gravity="center"
             android:text="@string/M_MINUS" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/MR"
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
@@ -100,7 +100,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/MR" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -109,7 +109,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="x!" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -118,7 +118,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/root" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/clear"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
@@ -129,7 +129,7 @@
             android:gravity="center"
             android:text="@string/C" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/DIVISION"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
@@ -140,7 +140,7 @@
             android:gravity="center"
             android:text="@string/division" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/MULTIPLE"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
@@ -151,7 +151,7 @@
             android:gravity="center"
             android:text="@string/multiple" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/delete_digit"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
@@ -161,7 +161,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/delete" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -170,7 +170,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/exhibitor" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -179,7 +179,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/ln" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/seven"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
@@ -190,7 +190,7 @@
             android:gravity="center"
             android:text="@string/seven" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/eight"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
@@ -201,7 +201,7 @@
             android:gravity="center"
             android:text="@string/eight" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/nine"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
@@ -212,7 +212,7 @@
             android:gravity="center"
             android:text="@string/nine" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/MINUS"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
@@ -222,7 +222,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/minus" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -231,7 +231,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/sin" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -240,7 +240,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/cos" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/four"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
@@ -251,7 +251,7 @@
             android:gravity="center"
             android:text="@string/four" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/five"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
@@ -262,7 +262,7 @@
             android:gravity="center"
             android:text="@string/five" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/six"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
@@ -273,7 +273,7 @@
             android:gravity="center"
             android:text="@string/six" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/PLUS"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
@@ -283,7 +283,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/plus" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -292,7 +292,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/tan" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -301,7 +301,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/rad" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/NumbersStyle"
             android:id="@+id/one"
             android:layout_width="0dp"
@@ -312,7 +312,7 @@
             android:gravity="center"
             android:text="@string/one" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/two"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
@@ -323,7 +323,7 @@
             android:gravity="center"
             android:text="@string/two" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/three"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
@@ -334,7 +334,7 @@
             android:gravity="center"
             android:text="@string/three" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/EQUALS"
             style="@style/OperationButtonsStyle"
             android:layout_width="0dp"
@@ -345,7 +345,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/equals" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -354,7 +354,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/_1_x" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/OtherButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -363,7 +363,7 @@
             android:layout_gravity="fill_horizontal"
             android:gravity="center"
             android:text="@string/cot" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/PERCENT"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
@@ -374,7 +374,7 @@
             android:gravity="center"
             android:text="@string/percent" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/zero"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
@@ -385,7 +385,7 @@
             android:gravity="center"
             android:text="@string/zero" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/COMMA"
             style="@style/NumbersStyle"
             android:layout_width="0dp"
