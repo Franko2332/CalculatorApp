@@ -34,4 +34,5 @@
     <string name="rad">rad</string>
     <string name="_1_x">1/x</string>
     <string name="cot">cot</string>
+    <string name="x_factorial">x!</string>
 </resources>

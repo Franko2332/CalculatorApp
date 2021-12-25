@@ -7,9 +7,10 @@ import android.text.Editable;
 import android.util.Log;
 import android.widget.EditText;
 
+import org.apache.commons.math3.util.CombinatoricsUtils;
+
 public class MyCalculator implements Parcelable {
     private EditText editText;
-
     private static boolean operandMode;
     private static String operand;
     private static String approvedOperand;
@@ -69,6 +70,137 @@ public class MyCalculator implements Parcelable {
         } else editText.setText(Float.toString(fl));
     }
 
+    @SuppressLint("SetTextI18n")
+    public void x_squared() {
+        resulting();
+        float fl = Float.parseFloat(editText.getText().toString());
+        fl*= fl;
+        if (fl % 1 == 0) {
+            editText.setText(Integer.toString((int) fl));
+        } else editText.setText(Float.toString(fl));
+        strForRestore = editText.getText().toString();
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void x_cube() {
+        resulting();
+        float fl = Float.parseFloat(editText.getText().toString());
+        fl= fl*fl*fl;
+        if (fl % 1 == 0) {
+            editText.setText(Integer.toString((int) fl));
+        } else editText.setText(Float.toString(fl));
+        strForRestore = editText.getText().toString();
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void x_factorial() {
+        float fl = Float.parseFloat(editText.getText().toString());
+        if (fl % 1 == 0) {
+            long result = CombinatoricsUtils.factorial((int)fl);
+            editText.setText(Integer.toString((int) result));
+        } else editText.setText("Число должно быть целым");
+        strForRestore = editText.getText().toString();
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void sqrt() {
+        resulting();
+        float fl = Float.parseFloat(editText.getText().toString());
+        fl= (float) Math.sqrt(fl);
+        if (fl % 1 == 0) {
+            editText.setText(Integer.toString((int) fl));
+        } else editText.setText(Float.toString(fl));
+        strForRestore = editText.getText().toString();
+    }
+
+
+    @SuppressLint("SetTextI18n")
+    public void ln() {
+        resulting();
+        float fl = Float.parseFloat(editText.getText().toString());
+        fl= (float) Math.log(fl);
+        if (fl % 1 == 0) {
+            editText.setText(Integer.toString((int) fl));
+        } else editText.setText(Float.toString(fl));
+        strForRestore = editText.getText().toString();
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void cos() {
+        resulting();
+        float fl = Float.parseFloat(editText.getText().toString());
+        fl = (float) Math.cos(fl);
+        if (fl % 1 == 0) {
+            editText.setText(Integer.toString((int) fl));
+        } else editText.setText(Float.toString(fl));
+        strForRestore = editText.getText().toString();
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void sin(){
+        resulting();
+        float fl = Float.parseFloat(editText.getText().toString());
+        fl = (float) Math.sin(fl);
+        if (fl % 1 == 0) {
+            editText.setText(Integer.toString((int) fl));
+        } else editText.setText(Float.toString(fl));
+        strForRestore = editText.getText().toString();
+    }
+    @SuppressLint("SetTextI18n")
+    public void tan(){
+        resulting();
+        float fl = Float.parseFloat(editText.getText().toString());
+        fl = (float) Math.tan(fl);
+        if (fl % 1 == 0) {
+            editText.setText(Integer.toString((int) fl));
+        } else editText.setText(Float.toString(fl));
+        strForRestore = editText.getText().toString();
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void cot(){
+        resulting();
+        float fl = Float.parseFloat(editText.getText().toString());
+        fl = (float) (1/Math.tan(fl));
+        if (fl % 1 == 0) {
+            editText.setText(Integer.toString((int) fl));
+        } else editText.setText(Float.toString(fl));
+        strForRestore = editText.getText().toString();
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void rad(){
+        resulting();
+        float fl = Float.parseFloat(editText.getText().toString());
+        fl = (float) (Math.toRadians(fl));
+        if (fl % 1 == 0) {
+            editText.setText(Integer.toString((int) fl));
+        } else editText.setText(Float.toString(fl));
+        strForRestore = editText.getText().toString();
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void exp() {
+        resulting();
+        float fl = Float.parseFloat(editText.getText().toString());
+        fl = (float) (Math.exp(fl));
+        if (fl % 1 == 0) {
+            editText.setText(Integer.toString((int) fl));
+        } else editText.setText(Float.toString(fl));
+        strForRestore = editText.getText().toString();
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void oneDivisionX() {
+        resulting();
+        float fl = Float.parseFloat(editText.getText().toString());
+        fl = 1/fl;
+        if (fl % 1 == 0) {
+            editText.setText(Integer.toString((int) fl));
+        } else editText.setText(Float.toString(fl));
+        strForRestore = editText.getText().toString();
+    }
+
     public void equals() {
         resulting();
     }
@@ -86,9 +218,9 @@ public class MyCalculator implements Parcelable {
     }
 
     public void comma() {
-        Log.e("before.strForRestore", strForRestore);
-        Log.e("before.number1", String.valueOf(number1));
-        Log.e("before.number2", String.valueOf(number2));
+//        Log.e("before.strForRestore", strForRestore);
+//        Log.e("before.number1", String.valueOf(number1));
+//        Log.e("before.number2", String.valueOf(number2));
         Editable editable = editText.getText();
         if (isOperationInputMode()) {
             uncheckOperandMode();
@@ -99,11 +231,11 @@ public class MyCalculator implements Parcelable {
         } else if (!editable.toString().contains(".")) {
             editable.append(".");
         }
-        Log.e("after.strForRestore", strForRestore);
-        Log.e("after.number1", String.valueOf(number1));
-        Log.e("after.number2", String.valueOf(number2));
-        Log.e("after.operand", operand);
-        Log.e("after.approved_operand", String.valueOf(approvedOperand!=null));
+//        Log.e("after.strForRestore", strForRestore);
+//        Log.e("after.number1", String.valueOf(number1));
+//        Log.e("after.number2", String.valueOf(number2));
+//        Log.e("after.operand", operand);
+//        Log.e("after.approved_operand", String.valueOf(approvedOperand!=null));
     }
 
     public void clear() {
@@ -115,6 +247,7 @@ public class MyCalculator implements Parcelable {
 
 
     public void deleteDigit() {
+        Log.e("delete_digit", "yes");
         uncheckOperandMode();
         if (editText.getText().toString().length() > 0) {
             if (editText.getText().toString().length() == 1) {
@@ -229,4 +362,8 @@ public class MyCalculator implements Parcelable {
             return new MyCalculator[size];
         }
     };
+
+
 }
+
+

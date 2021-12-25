@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
@@ -53,6 +54,25 @@ public class MainActivity extends AppCompatActivity {
     private void init() {
         editText = findViewById(R.id.calcEditText);
         myCalculator = new MyCalculator(editText);
+        int orientation = this.getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE){
+            Button[] landOperationsButtons = new Button[12];
+            landOperationsButtons [0] = findViewById(R.id.X_SQUARED);
+            landOperationsButtons [1] = findViewById(R.id.X_CUBE);
+            landOperationsButtons [2] = findViewById(R.id.ROOT);
+            landOperationsButtons [3] = findViewById(R.id.EXHIBITOR);
+            landOperationsButtons [4] = findViewById(R.id.LN);
+            landOperationsButtons [5] = findViewById(R.id.X_FACTORIAL);
+            landOperationsButtons [6] = findViewById(R.id.COS);
+            landOperationsButtons [7] = findViewById(R.id.SIN);
+            landOperationsButtons [8] = findViewById(R.id.COT);
+            landOperationsButtons [9] = findViewById(R.id.RAD);
+            landOperationsButtons [10] = findViewById(R.id.ONE_DIV_X);
+            landOperationsButtons [11] = findViewById(R.id.TAN);
+            for (Button btn: landOperationsButtons) {
+                btn.setOnClickListener(new MyOnclickListenerForOperandButtons(myCalculator));
+            }
+        }
         Button[] numberButtons = new Button[10];
         numberButtons[0] = findViewById(R.id.zero);
         numberButtons[1] = findViewById(R.id.one);

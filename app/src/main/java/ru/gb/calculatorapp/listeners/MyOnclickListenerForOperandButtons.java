@@ -37,6 +37,30 @@ public class MyOnclickListenerForOperandButtons implements View.OnClickListener 
             myCalculator.m_minus();
         } else if (id.equals(PACKAGE+Operations.EQUALS.name())) {
             myCalculator.equals();
+        } else if (id.equals(PACKAGE+Operations.X_SQUARED.name())) {
+            myCalculator.x_squared();
+        } else if (id.equals(PACKAGE+Operations.X_CUBE.name())) {
+            myCalculator.x_cube();
+        } else if (id.equals(PACKAGE+Operations.X_FACTORIAL.name())) {
+            myCalculator.x_factorial();
+        } else if (id.equals(PACKAGE+Operations.ROOT.name())) {
+            myCalculator.sqrt();
+        } else if (id.equals(PACKAGE+Operations.LN.name())) {
+            myCalculator.ln();
+        } else if (id.equals(PACKAGE+Operations.COS.name())) {
+            myCalculator.cos();
+        } else if (id.equals(PACKAGE+Operations.SIN.name())) {
+            myCalculator.sin();
+        } else if (id.equals(PACKAGE+Operations.TAN.name())) {
+            myCalculator.tan();
+        } else if (id.equals(PACKAGE+Operations.COT.name())) {
+            myCalculator.cot();
+        } else if (id.equals(PACKAGE+Operations.RAD.name())) {
+            myCalculator.rad();
+        } else if (id.equals(PACKAGE+Operations.EXHIBITOR.name())) {
+            myCalculator.exp();
+        } else if (id.equals(PACKAGE+Operations.ONE_DIV_X.name())) {
+            myCalculator.oneDivisionX();
         }
     }
 }

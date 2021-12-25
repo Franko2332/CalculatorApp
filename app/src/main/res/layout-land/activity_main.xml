@@ -40,11 +40,13 @@
         <!--            android:inputType="number"-->
         <!--            android:textSize="30sp" />-->
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/X_SQUARED"
             style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="@string/x_squared" />
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/X_CUBE"
             style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
@@ -78,11 +80,13 @@
             android:layout_columnWeight="1"
             android:text="@string/MR" />
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/X_FACTORIAL"
             style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:text="x!" />
+            android:text="@string/x_factorial" />
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/ROOT"
             style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
@@ -115,11 +119,13 @@
             android:layout_columnWeight="1"
             android:text="@string/delete" />
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/EXHIBITOR"
             style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="@string/exhibitor" />
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/LN"
             style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
@@ -152,16 +158,19 @@
             android:layout_columnWeight="1"
             android:text="@string/minus" />
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/SIN"
             style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="@string/sin" />
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/COS"
             style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="@string/cos" />
         <com.google.android.material.button.MaterialButton
+
             android:id="@+id/four"
             style="@style/NumbersButtonStyle"
             android:layout_rowWeight="1"
@@ -189,11 +198,13 @@
             android:layout_columnWeight="1"
             android:text="@string/plus" />
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/TAN"
             style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="@string/tan" />
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/RAD"
             style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
@@ -227,11 +238,13 @@
             android:layout_columnWeight="1"
             android:text="@string/equals" />
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/ONE_DIV_X"
             style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="@string/_1_x" />
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/COT"
             style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"

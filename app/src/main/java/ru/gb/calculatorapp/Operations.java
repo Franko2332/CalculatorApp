@@ -1,6 +1,6 @@
 package ru.gb.calculatorapp;
 
-public enum Operations{
+public enum Operations {
     DIVISION,
     MULTIPLE,
     MINUS,
@@ -11,5 +11,17 @@ public enum Operations{
     MC,
     MR,
     M_PLUS,
-    M_MINUS
+    M_MINUS,
+    X_SQUARED,
+    X_CUBE,
+    ROOT,
+    EXHIBITOR,
+    LN,
+    SIN,
+    COS,
+    TAN,
+    RAD,
+    ONE_DIV_X,
+    COT,
+    X_FACTORIAL
 }
