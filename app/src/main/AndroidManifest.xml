@@ -11,11 +11,6 @@
         android:theme="@style/CalculatorLightTheme">
         <activity android:name=".ChangeThemeActivity"></activity>
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <intent-filter android:label="ru.gb.intentprocess.MainActivity">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -26,6 +21,12 @@
                     android:host="intent"
                     android:scheme="example" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
 
         </activity>
     </application>
