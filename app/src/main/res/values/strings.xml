@@ -39,8 +39,8 @@
     <string name="dark_theme">Dark Theme</string>
     <string name="use_theme_for_app">Use theme for app</string>
     <string name="dark_mode" translatable="false">false</string>
-    <string name="light_theme">light_theme</string>
-    <string name="gray_theme">gray_theme</string>
+    <string name="light_theme">Light theme</string>
+    <string name="gray_theme">Gray theme</string>
     <string name="save">save</string>
     <string name="choose_theme">Choose Theme</string>
 </resources>
