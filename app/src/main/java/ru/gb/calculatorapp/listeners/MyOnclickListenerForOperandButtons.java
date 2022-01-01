@@ -27,22 +27,12 @@ public class MyOnclickListenerForOperandButtons implements View.OnClickListener 
             myCalculator.multiple();
         } else if (id.equals(PACKAGE+Operations.PERCENT.name())) {
             myCalculator.percent();
-        } else if (id.equals(PACKAGE+Operations.MC.name())) {
-            myCalculator.mc();
-        } else if (id.equals(PACKAGE+Operations.MR.name())) {
-            myCalculator.mr();
-        } else if (id.equals(PACKAGE+Operations.M_PLUS.name())) {
-            myCalculator.m_plus();
-        } else if (id.equals(PACKAGE+Operations.M_MINUS.name())) {
-            myCalculator.m_minus();
         } else if (id.equals(PACKAGE+Operations.EQUALS.name())) {
             myCalculator.equals();
         } else if (id.equals(PACKAGE+Operations.X_SQUARED.name())) {
             myCalculator.x_squared();
         } else if (id.equals(PACKAGE+Operations.X_CUBE.name())) {
             myCalculator.x_cube();
-        } else if (id.equals(PACKAGE+Operations.X_FACTORIAL.name())) {
-            myCalculator.x_factorial();
         } else if (id.equals(PACKAGE+Operations.ROOT.name())) {
             myCalculator.sqrt();
         } else if (id.equals(PACKAGE+Operations.LN.name())) {
@@ -53,9 +43,7 @@ public class MyOnclickListenerForOperandButtons implements View.OnClickListener 
             myCalculator.sin();
         } else if (id.equals(PACKAGE+Operations.TAN.name())) {
             myCalculator.tan();
-        } else if (id.equals(PACKAGE+Operations.COT.name())) {
-            myCalculator.cot();
-        } else if (id.equals(PACKAGE+Operations.RAD.name())) {
+        }  else if (id.equals(PACKAGE+Operations.RAD.name())) {
             myCalculator.rad();
         } else if (id.equals(PACKAGE+Operations.EXHIBITOR.name())) {
             myCalculator.exp();

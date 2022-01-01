@@ -1,38 +1,46 @@
 <resources>
-    <string name="app_name">Calculator</string>
-    <string name="MC">MC</string>
-    <string name="M_PLUS">M+</string>
-    <string name="M_MINUS">M-</string>
-    <string name="MR">MR</string>
-    <string name="C">C</string>
-    <string name="division">÷</string>
-    <string name="multiple">X</string>
-    <string name="delete">⌫</string>
-    <string name="seven">7</string>
-    <string name="eight">8</string>
-    <string name="nine">9</string>
-    <string name="four">4</string>
-    <string name="five">5</string>
-    <string name="six">6</string>
-    <string name="one">1</string>
-    <string name="minus">-</string>
-    <string name="plus">+</string>
-    <string name="two">2</string>
-    <string name="three">3</string>
-    <string name="equals">=</string>
-    <string name="percent">%</string>
-    <string name="zero">0</string>
-    <string name="comma">,</string>
-    <string name="x_squared">x²</string>
-    <string name="x_cube">x³</string>
-    <string name="root">√</string>
-    <string name="exhibitor">e</string>
-    <string name="ln">ln</string>
-    <string name="sin">sin</string>
-    <string name="cos">cos</string>
-    <string name="tan">tan</string>
-    <string name="rad">rad</string>
-    <string name="_1_x">1/x</string>
-    <string name="cot">cot</string>
-    <string name="x_factorial">x!</string>
+    <string name="app_name" translatable="false">Calculator</string>
+    <string name="MC" translatable="false">MC</string>
+    <string name="M_PLUS" translatable="false">M+</string>
+    <string name="M_MINUS" translatable="false">M-</string>
+    <string name="MR" translatable="false">MR</string>
+    <string name="C" translatable="false">C</string>
+    <string name="division" translatable="false">÷</string>
+    <string name="multiple" translatable="false">X</string>
+    <string name="delete" translatable="false">⌫</string>
+    <string name="seven" translatable="false">7</string>
+    <string name="eight" translatable="false">8</string>
+    <string name="nine" translatable="false">9</string>
+    <string name="four" translatable="false">4</string>
+    <string name="five" translatable="false">5</string>
+    <string name="six" translatable="false">6</string>
+    <string name="one" translatable="false">1</string>
+    <string name="minus" translatable="false">-</string>
+    <string name="plus" translatable="false">+</string>
+    <string name="two" translatable="false">2</string>
+    <string name="three" translatable="false">3</string>
+    <string name="equals" translatable="false">=</string>
+    <string name="percent" translatable="false">%</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="comma" translatable="false">,</string>
+    <string name="x_squared" translatable="false">x²</string>
+    <string name="x_cube" translatable="false">x³</string>
+    <string name="root" translatable="false">√</string>
+    <string name="exhibitor" translatable="false">e</string>
+    <string name="ln" translatable="false">ln</string>
+    <string name="sin" translatable="false">sin</string>
+    <string name="cos" translatable="false">cos</string>
+    <string name="tan" translatable="false">tan</string>
+    <string name="rad" translatable="false">rad</string>
+    <string name="_1_x" translatable="false">1/x</string>
+    <string name="cot" translatable="false">cot</string>
+    <string name="x_factorial" translatable="false">x!</string>
+    <string name="preferences">Preferences</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="use_theme_for_app">Use theme for app</string>
+    <string name="dark_mode" translatable="false">false</string>
+    <string name="light_theme">light_theme</string>
+    <string name="gray_theme">gray_theme</string>
+    <string name="save">save</string>
+    <string name="choose_theme">Choose Theme</string>
 </resources>

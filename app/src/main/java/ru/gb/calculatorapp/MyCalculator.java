@@ -351,6 +351,30 @@ public class MyCalculator implements Parcelable {
         parcel.writeString(strForRestore);
     }
 
+    public  String getApprovedOperand() {
+        return approvedOperand;
+    }
+
+    public  String getOperand() {
+        return operand;
+    }
+
+    public  boolean isOperandMode() {
+        return operandMode;
+    }
+
+    public void setApprovedOperand(String approvedOperand) {
+       this.approvedOperand = approvedOperand;
+    }
+
+    public void setOperand(String operand) {
+        this.operand = operand;
+    }
+
+    public  void setOperandMode(boolean operandMode) {
+        this.operandMode = operandMode;
+    }
+
     public static final Creator<MyCalculator> CREATOR = new Creator<MyCalculator>() {
         @Override
         public MyCalculator createFromParcel(Parcel in) {

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_layout"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/LayoutStyle"
     tools:context=".MainActivity">
-
+    <androidx.appcompat.widget.Toolbar
+      android:theme="@style/ThemeActionBar"
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
@@ -15,10 +19,9 @@
         android:paddingStart="5dp"
         android:paddingEnd="13dp"
         android:paddingBottom="15dp"
-        android:rowCount="8">
+        android:rowCount="7">
 
         <EditText
-            style="@style/EditTextStyle"
             android:id="@+id/calcEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,51 +42,25 @@
         <!--            android:autofillHints=""-->
         <!--            android:inputType="number"-->
         <!--            android:textSize="30sp" />-->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/MC"
-            style="@style/OtherOperationsButtonStyle"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:text="@string/MC" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/M_PLUS"
-            style="@style/OtherOperationsButtonStyle"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:text="@string/M_PLUS" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/M_MINUS"
-            style="@style/OtherOperationsButtonStyle"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:text="@string/M_MINUS" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/MR"
-            style="@style/OtherOperationsButtonStyle"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:text="@string/MR" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/clear"
-            style="@style/MainOperationsButtonsStyle"
+            style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="@string/C" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/DIVISION"
-            style="@style/MainOperationsButtonsStyle"
+            style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="@string/division" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/MULTIPLE"
-            style="@style/MainOperationsButtonsStyle"
+            style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:text="@string/multiple" />

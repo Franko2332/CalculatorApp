@@ -3,6 +3,6 @@
     <dimen name="number_buttons_text_size">18sp</dimen>
     <dimen name="main_operations_buttons_text_size">18sp</dimen>
     <dimen name="other_operations_buttons_text_size">18sp</dimen>
-    <dimen name="edit_text_text_size">40sp</dimen>
-    <dimen name="grid_layout_height">320dp</dimen>
+    <dimen name="edit_text_text_size">100sp</dimen>
+    <dimen name="grid_layout_height">270dp</dimen>
 </resources>
