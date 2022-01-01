@@ -1,0 +1,4 @@
+<resources>
+<string name="dark_mode">true</string>
+    <string name="light_theme">light_theme</string>
+</resources>
