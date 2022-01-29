@@ -4,5 +4,6 @@
     <dimen name="main_operations_buttons_text_size">30sp</dimen>
     <dimen name="other_operations_buttons_text_size">25sp</dimen>
     <dimen name="edit_text_text_size">50sp</dimen>
-    <dimen name="grid_layout_height">550dp</dimen>
+    <dimen name="grid_layout_height">500dp</dimen>
+    <dimen name="radio_button_text_size">20sp</dimen>
 </resources>
