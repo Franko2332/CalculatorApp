@@ -1,295 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_layout"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity"
-    android:background="#000000"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+      android:theme="@style/ThemeActionBar"
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="@dimen/grid_layout_height"
         android:layout_gravity="bottom"
         android:columnCount="4"
-        android:rowCount="8"
         android:paddingStart="5dp"
         android:paddingEnd="13dp"
         android:paddingBottom="15dp"
-        >
+        android:rowCount="7">
+
         <EditText
             android:id="@+id/calcEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnSpan="4"
             android:layout_gravity="fill_horizontal"
+            android:background="@android:color/transparent"
             android:gravity="right"
-            android:text="@string/zero"
             android:inputType="number"
-            android:textSize="50sp"
-            android:background="@android:color/transparent"/>
-<!--        <TextView-->
-<!--            android:layout_marginBottom="10dp"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_columnSpan="4"-->
-<!--            android:layout_gravity="fill_horizontal"-->
-<!--            android:gravity="right"-->
-<!--            android:autofillHints=""-->
-<!--            android:inputType="number"-->
-<!--            android:textSize="30sp" />-->
-        <Button
-            android:id="@+id/MC"
-            style="@style/OtherButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
-            android:text="@string/MC" />
+            android:text="@string/zero"
+            android:textSize="@dimen/edit_text_text_size" />
+        <!--        <TextView-->
+        <!--            android:layout_marginBottom="10dp"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_columnSpan="4"-->
+        <!--            android:layout_gravity="fill_horizontal"-->
+        <!--            android:gravity="right"-->
+        <!--            android:autofillHints=""-->
+        <!--            android:inputType="number"-->
+        <!--            android:textSize="30sp" />-->
 
-        <Button
-            android:id="@+id/M_PLUS"
-            style="@style/OtherButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
-            android:text="@string/M_PLUS" />
 
-        <Button
-            android:id="@+id/M_MINUS"
-            style="@style/OtherButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
-            android:text="@string/M_MINUS" />
-
-        <Button
-            android:id="@+id/MR"
-            style="@style/OtherButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
-            android:text="@string/MR" />
-
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/clear"
-            style="@style/OperationButtonsStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/C" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/DIVISION"
-            style="@style/OperationButtonsStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/division" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/MULTIPLE"
-            style="@style/OperationButtonsStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/OtherOperationsButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/multiple" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/delete_digit"
-            style="@style/OperationButtonsStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/MainOperationsButtonsStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/delete" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/seven"
-            style="@style/NumbersStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/NumbersButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/seven" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/eight"
-            style="@style/NumbersStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/NumbersButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/eight" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/nine"
-            style="@style/NumbersStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/NumbersButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/nine" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/MINUS"
-            style="@style/OperationButtonsStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/MainOperationsButtonsStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/minus" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/four"
-            style="@style/NumbersStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/NumbersButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/four" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/five"
-            style="@style/NumbersStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/NumbersButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/five" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/six"
-            style="@style/NumbersStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/NumbersButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/six" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/PLUS"
-            style="@style/OperationButtonsStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/MainOperationsButtonsStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/plus" />
 
-        <Button
-            style="@style/NumbersStyle"
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/one"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/NumbersButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/one" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/two"
-            style="@style/NumbersStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/NumbersButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/two" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/three"
-            style="@style/NumbersStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/NumbersButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/three" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/EQUALS"
-            style="@style/OperationButtonsStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/MainOperationsButtonsStyle"
             android:layout_rowSpan="2"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/equals" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/PERCENT"
-            style="@style/NumbersStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/NumbersButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/percent" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/zero"
-            style="@style/NumbersStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/NumbersButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/zero" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/COMMA"
-            style="@style/NumbersStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            style="@style/NumbersButtonStyle"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center"
             android:text="@string/comma" />
 
     </GridLayout>

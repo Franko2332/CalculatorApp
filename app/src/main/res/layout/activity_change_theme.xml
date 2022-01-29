@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/theme_linear_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangeThemeActivity"
+
+    >
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_theme"
+        android:textSize="@dimen/number_buttons_text_size"
+        />
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/dark_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/radio_button_text_size"
+            android:text="@string/dark_theme"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/light_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/light_theme"
+            android:textSize="@dimen/radio_button_text_size" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/gray_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/radio_button_text_size"
+            android:text="@string/gray_theme"/>
+    </RadioGroup>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_theme_button"
+        android:layout_marginTop="5dp"
+        style="@style/SaveButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="@string/save"
+        />
+
+</LinearLayout>

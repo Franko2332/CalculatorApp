@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="MC">MC</string>
+    <string name="M_PLUS">M+</string>
+    <string name="M_MINUS">M-</string>
+    <string name="MR">MR</string>
+    <string name="C">C</string>
+    <string name="division">÷</string>
+    <string name="multiple">X</string>
+    <string name="delete">⌫</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="one">1</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="equals">=</string>
+    <string name="percent">%</string>
+    <string name="zero">0</string>
+    <string name="comma">,</string>
+    <string name="x_squared">x²</string>
+    <string name="x_cube">x³</string>
+    <string name="root">√</string>
+    <string name="exhibitor">e</string>
+    <string name="ln">ln</string>
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="tan">tan</string>
+    <string name="rad">rad</string>
+    <string name="_1_x">1/x</string>
+    <string name="cot">cot</string>
+    <string name="x_factorial">x!</string>
+<string name="preferences">Настройки</string>
+<string name="dark_theme">Темная тема</string>
+<string name="use_theme_for_app">Выберите тему</string>
+    <string name="light_theme">Светлая тема</string>
+    <string name="gray_theme">Серая тема</string>
+    <string name="save">сохранить</string>
+    <string name="choose_theme">Выберите тему</string>
+</resources>
